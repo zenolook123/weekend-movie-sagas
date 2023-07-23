@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom'; // Import Link component
+import { Link } from 'react-router-dom';
 import './MovieList.css';
 
 function MovieList() {
@@ -18,7 +18,7 @@ function MovieList() {
       <h1>MovieList</h1>
       <section className="movies">
         {movies.map(movie => {
-            
+
              const handleClick = () => {
                 dispatch({ 
                     type: 'FETCH_GENRES', payload: movie.id
