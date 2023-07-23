@@ -7,16 +7,11 @@ function MovieDetails() {
     return (
         <div>
             <h1>Movie Details</h1>
-            <h1>{genres.movie_title}</h1>
-  
-            {genres.map((movie) => {
-                return (
-                    <div key={movie.movie_id}>
-                     
-                        <h3>{movie.genre_name}</h3>
-                    </div>
-                );
-            })}
+            <img src={genres[0].movie_poster}/>
+            <h1>{genres[0].movie_title}</h1>
+            <h2>{genres[0].genre_name}</h2>
+            <h3>{genres[0].movie_description}</h3>
+
         </div>
     );
  }

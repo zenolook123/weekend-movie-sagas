@@ -8,8 +8,11 @@ router.get('/:id', (req, res) => {
   const query = `
     SELECT movies.id AS movie_id, 
            movies.title AS movie_title, 
+           movies.description AS movie_description,
+           movies.poster as movie_poster,
            genres.id AS genre_id, 
            genres.name AS genre_name
+           
     FROM movies
     INNER JOIN movies_genres ON movies.id = movies_genres.movie_id
     INNER JOIN genres ON movies_genres.genre_id = genres.id
